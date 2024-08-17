@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.merkuzio'
+version = '1.0-SNAPSHOT'
+
+mainClassName = 'TelegramBotApp'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.telegram:telegrambots:6.1.0'
+    implementation 'org.telegram:telegrambotsextensions:6.1.0'
+    implementation 'org.json:json:20230227'
+}

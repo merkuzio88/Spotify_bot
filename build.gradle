@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 group = 'com.merkuzio'
@@ -17,3 +18,11 @@ dependencies {
     implementation 'org.telegram:telegrambotsextensions:6.1.0'
     implementation 'org.json:json:20230227'
 }
+
+shadowJar {
+    archiveBaseName.set('Spotify_bot')
+    archiveVersion.set('1.0-SNAPSHOT')
+    archiveClassifier.set('')
+}
+
+build.dependsOn shadowJar
